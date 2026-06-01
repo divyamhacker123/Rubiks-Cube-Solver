@@ -140,6 +140,6 @@ Disk Avoidance: The algorithm strictly forbids reading the heuristic from a disk
 [ ] Interactive CLI: Allow users to input their own scrambled cube states via console strings.
 
 👨‍💻 Author
-Developed by Divyam Gupta
+Developed by Divyam Gupta and Garv Verma
 
 If you found this repository interesting or educational, feel free to drop a ⭐!
