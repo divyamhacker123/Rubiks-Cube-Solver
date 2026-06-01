@@ -47,6 +47,8 @@ void PatternDatabase::setNumMoves(uint32_t index, uint8_t moves) {
     }
 }
 
+
+// Starting from the fully solved cube
 void PatternDatabase::generateCornerDatabase() {
     RubiksCube solvedCube;
     uint32_t solvedIndex = computeCornerIndex(solvedCube);
