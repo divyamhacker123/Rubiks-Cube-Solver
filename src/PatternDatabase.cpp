@@ -7,9 +7,13 @@ PatternDatabase::PatternDatabase(const std::string& filename) : filePath(filenam
     database.resize(44089920, 0xFF); 
 }
 
+// when we will find an scrambled cube then we will compute the corner Index for fast solving the code by looking in the PatternDatabase
 uint32_t PatternDatabase::computeCornerIndex(const RubiksCube& cube) const {
     uint32_t orientationIndex = 0;
+    // we store the position and orientation in a single 8bits where last 3 bits states positions and remaining bits are orientations
     for (int i = 0; i < 7; ++i) {
+        // to avoid the collisions we have multiplied it by 3
+        // ex : 1 + 2 = 3 , 2 + 1 = 3 
         orientationIndex = orientationIndex * 3 + (cube.corners[i] >> 3);
     }
 
