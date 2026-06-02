@@ -14,6 +14,11 @@ uint32_t PatternDatabase::computeCornerIndex(const RubiksCube& cube) const {
     for (int i = 0; i < 7; ++i) {
         // to avoid the collisions we have multiplied it by 3
         // ex : 1 + 2 = 3 , 2 + 1 = 3 
+        // because the corner can be twisted in only three ways (0, 1, 2)
+        // orientation wouldn't be bigger than 2
+        // 0 -> pointing the correct way
+        // 1 -> twisted once(clockwise)
+        // 2 -> twisted twice (counter - clockwise)
         orientationIndex = orientationIndex * 3 + (cube.corners[i] >> 3);
     }
 
