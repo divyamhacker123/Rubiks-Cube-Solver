@@ -5,7 +5,8 @@
 #include <vector>
 #include <string>
 
-// Database for stroring the scrambled cube corners state and no of steps to fix the cubies 
+// Database for storing the scrambled cube corners state and no of steps to fix the cubies 
+// ..
 class PatternDatabase {
 public:
     PatternDatabase(const std::string& filename);
